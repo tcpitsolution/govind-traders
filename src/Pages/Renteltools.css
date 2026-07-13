@@ -1,0 +1,136 @@
+.text-yellow {
+  color: #f5b400;
+}
+
+/* ===== PAGE WRAPPER ===== */
+.rental-page {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 56px 16px 80px;
+}
+
+/* ===== MAIN HEADING ===== */
+.rental-main-heading {
+  text-align: center;
+  font-size: 34px;
+  font-weight: 800;
+  color: #08060d;
+  margin: 0 0 8px;
+  letter-spacing: -0.5px;
+}
+
+@media (max-width: 640px) {
+  .rental-main-heading {
+    font-size: 26px;
+  }
+}
+
+.rental-main-subtitle {
+  text-align: center;
+  font-size: 14px;
+  color: #6b7280;
+  margin: 0 0 56px;
+}
+
+/* ===== CATEGORY SECTION ===== */
+.tool-category-section {
+  margin-bottom: 64px;
+}
+
+.tool-category-section:last-child {
+  margin-bottom: 0;
+}
+
+.category-heading {
+  text-align: center;
+  font-size: 22px;
+  font-weight: 700;
+  color: #08060d;
+  margin-bottom: 28px;
+  letter-spacing: 0.3px;
+}
+
+/* ===== GRID ===== */
+.tool-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+@media (min-width: 640px) {
+  .tool-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .tool-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+/* ===== PREMIUM CARD ===== */
+.tool-card {
+  background: #ffffff;
+  border: 1px solid #e5e4e7;
+  border-radius: 12px;
+  padding: 20px 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
+}
+
+.tool-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1);
+  border-color: rgba(245, 180, 0, 0.5);
+}
+
+.tool-img {
+  width: 100%;
+  max-width: 140px;
+  height: 110px;
+  object-fit: contain;
+  margin-bottom: 14px;
+}
+
+.tool-name {
+  font-size: 14px;
+  font-weight: 700;
+  color: #08060d;
+  margin: 0 0 6px;
+  line-height: 1.3;
+}
+
+.tool-desc {
+  font-size: 12px;
+  color: #6b7280;
+  margin: 0 0 16px;
+  line-height: 1.4;
+  min-height: 32px;
+}
+
+/* ===== BOOK NOW BUTTON ===== */
+.book-now-btn {
+  display: inline-block;
+  width: 100%;
+  background: transparent;
+  color: #f5b400;
+  border: 2px solid #f5b400;
+  font-weight: 600;
+  font-size: 13px;
+  padding: 8px 16px;
+  border-radius: 4px;
+  text-decoration: none;
+  text-align: center;
+  transition: background 0.2s, color 0.2s;
+  box-sizing: border-box;
+}
+
+.book-now-btn:hover {
+  background: #f5b400;
+  color: #000;
+}

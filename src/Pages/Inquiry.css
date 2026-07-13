@@ -1,0 +1,264 @@
+.text-yellow {
+  color: #f5b400;
+}
+
+/* ===== SECTION 1: VIDEO HERO ===== */
+.video-hero {
+  position: relative;
+  height: 60vh;
+  min-height: 380px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.video-bg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.video-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.55);
+}
+
+.video-hero-content {
+  position: relative;
+  text-align: center;
+  padding: 0 20px;
+}
+
+.video-hero-content h1 {
+  color: #fff;
+  font-size: 34px;
+  font-weight: 800;
+  line-height: 1.3;
+  margin: 0;
+}
+
+@media (max-width: 640px) {
+  .video-hero-content h1 {
+    font-size: 22px;
+  }
+}
+
+/* ===== SECTION 2: STATS COUNTER ===== */
+.counter-section {
+  background: #08060d;
+  padding: 48px 16px;
+  width: 100%;
+}
+
+.counter-grid {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: grid !important;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+  text-align: center;
+}
+
+@media (min-width: 768px) {
+  .counter-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.counter-box {
+  display: flex !important;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  min-width: 0;
+}
+
+.counter-number {
+  font-size: 32px;
+  font-weight: 800;
+  color: #f5b400;
+  line-height: 1.1;
+  white-space: nowrap;
+}
+
+@media (min-width: 480px) {
+  .counter-number {
+    font-size: 38px;
+  }
+}
+
+@media (min-width: 768px) {
+  .counter-number {
+    font-size: 44px;
+  }
+}
+
+.counter-label {
+  font-size: 12px;
+  font-weight: 600;
+  color: #fff;
+  letter-spacing: 0.3px;
+}
+
+@media (min-width: 768px) {
+  .counter-label {
+    font-size: 14px;
+  }
+}
+
+/* ===== SECTION 3: TEXT + FORM ===== */
+.text-form-section {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 64px 16px;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 40px;
+  align-items: center;
+}
+
+@media (min-width: 900px) {
+  .text-form-section {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.text-side h2 {
+  font-size: 30px;
+  font-weight: 700;
+  color: #08060d;
+  line-height: 1.35;
+  margin: 0 0 16px;
+}
+.text-tagline {
+  display: inline-block;
+  font-size: 13px;
+  font-weight: 700;
+  color: #d9930d;
+  background: rgba(245, 180, 0, 0.1);
+  padding: 6px 14px;
+  border-radius: 20px;
+  margin-bottom: 14px;
+  letter-spacing: 0.3px;
+}
+
+.text-side h2 {
+  font-size: 30px;
+  font-weight: 700;
+  color: #08060d;
+  line-height: 1.35;
+  margin: 0 0 16px;
+}
+
+@media (max-width: 640px) {
+  .text-side h2 {
+    font-size: 24px;
+  }
+}
+
+.text-side p {
+  font-size: 15px;
+  color: #6b7280;
+  line-height: 1.7;
+  margin: 0 0 24px;
+}
+
+.feature-points {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.feature-point {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 14px;
+  font-weight: 600;
+  color: #08060d;
+}
+
+.feature-point .dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #f5b400;
+  flex-shrink: 0;
+}
+
+@media (max-width: 640px) {
+  .text-side h2 {
+    font-size: 24px;
+  }
+}
+
+.text-side p {
+  font-size: 15px;
+  color: #6b7280;
+  margin: 0;
+}
+
+.form-side {
+  display: flex;
+}
+
+.inquiry-form {
+  width: 100%;
+  background: #fff;
+  border: 1px solid #e5e4e7;
+  border-radius: 12px;
+  padding: 28px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.06);
+}
+
+.inquiry-form input,
+.inquiry-form select,
+.inquiry-form textarea {
+  border: 1px solid #e5e4e7;
+  border-radius: 6px;
+  padding: 12px 14px;
+  font-size: 14px;
+  outline: none;
+  font-family: inherit;
+  color: #08060d;
+  transition: border-color 0.2s;
+}
+
+.inquiry-form input:focus,
+.inquiry-form select:focus,
+.inquiry-form textarea:focus {
+  border-color: #f5b400;
+}
+
+.inquiry-form textarea {
+  resize: vertical;
+}
+
+.submit-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  background: linear-gradient(135deg, #f5b400, #d9930d);
+  color: #08060d;
+  font-weight: 700;
+  padding: 14px 0;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 14px;
+  box-shadow: 0 4px 12px rgba(245, 180, 0, 0.35);
+  transition: box-shadow 0.2s ease;
+}
+
+.submit-btn:hover {
+  box-shadow: 0 6px 18px rgba(245, 180, 0, 0.5);
+}
