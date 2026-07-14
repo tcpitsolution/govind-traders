@@ -1,6 +1,6 @@
-import React from "react";
+import React, { useState } from "react";
 import { NavLink, useNavigate } from "react-router-dom";
-import { Phone, Mail, MapPin } from "lucide-react";
+import { Phone, Mail, MapPin, Menu, X } from "lucide-react";
 import { FaFacebookF, FaInstagram, FaWhatsapp } from "react-icons/fa";
 import "./Header.css";
 import logo from "../assets/images/logo.png";
@@ -13,6 +13,8 @@ import { WHATSAPP_NUMBER, WHATSAPP_MESSAGE } from "../config";
 
 export default function Header() {
   const navigate = useNavigate();
+  const [menuOpen, setMenuOpen] = useState(false);
+
   return (
     <>
       {/* TOP BAR */}
@@ -33,22 +35,22 @@ export default function Header() {
             </span>
           </div>
           <div className="topbar-right">
-            <a
-              href="https://www.facebook.com"
+            
+            <a href="https://www.facebook.com"
               target="_blank"
               rel="noopener noreferrer"
             >
               <FaFacebookF size={14} />
             </a>
-            <a
-              href="https://www.instagram.com"
+            
+             <a href="https://www.instagram.com"
               target="_blank"
               rel="noopener noreferrer"
             >
               <FaInstagram size={14} />
             </a>
-            <a
-              href={`https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(WHATSAPP_MESSAGE)}`}
+            
+             <a href={`https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(WHATSAPP_MESSAGE)}`}
               target="_blank"
               rel="noopener noreferrer"
             >
@@ -70,46 +72,61 @@ export default function Header() {
             </div>
           </div>
 
-          <nav className="nav-links">
+          <nav className={`nav-links ${menuOpen ? "open" : ""}`}>
             <NavLink
               to="/"
               end
+              onClick={() => setMenuOpen(false)}
               className={({ isActive }) => (isActive ? "active" : "")}
             >
               Home
             </NavLink>
             <NavLink
               to="/products"
+              onClick={() => setMenuOpen(false)}
               className={({ isActive }) => (isActive ? "active" : "")}
             >
               Products
             </NavLink>
             <NavLink
               to="/rental-tools"
+              onClick={() => setMenuOpen(false)}
               className={({ isActive }) => (isActive ? "active" : "")}
             >
               Rental Tools
             </NavLink>
             <NavLink
               to="/inquiry"
+              onClick={() => setMenuOpen(false)}
               className={({ isActive }) => (isActive ? "active" : "")}
             >
               Inquiry
             </NavLink>
             <NavLink
               to="/contact-us"
+              onClick={() => setMenuOpen(false)}
               className={({ isActive }) => (isActive ? "active" : "")}
             >
               Contact Us
             </NavLink>
           </nav>
 
-          <button
-            className="btn btn-yellow call-now-btn"
-            onClick={() => navigate("/contact-us")}
-          >
-            <Phone size={16} /> Call Now
-          </button>
+          <div className="navbar-right">
+            <button
+              className="btn btn-yellow call-now-btn"
+              onClick={() => navigate("/contact-us")}
+            >
+              <Phone size={16} /> Call Now
+            </button>
+
+            <button
+              className="menu-toggle"
+              onClick={() => setMenuOpen(!menuOpen)}
+              aria-label="Toggle menu"
+            >
+              {menuOpen ? <X size={24} /> : <Menu size={24} />}
+            </button>
+          </div>
         </div>
       </header>
     </>
